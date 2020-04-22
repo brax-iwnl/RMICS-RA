@@ -1,6 +1,6 @@
 package dao;
 
-public class ProdutoDAO {
+public class AlunoDAO {
      
     public void insert(){}
     public void update(){}
