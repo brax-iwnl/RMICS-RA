@@ -13,5 +13,6 @@ public interface InterfaceCardapio extends Remote{
     public void setPrecoPrato(double PrecoPrato) throws RemoteException;
     public int getQtdPrato() throws RemoteException;
     public void setQtdPrato(int QtdPrato) throws RemoteException;
+    public void Adicionar() throws RemoteException;
 
 }

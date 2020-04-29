@@ -13,5 +13,6 @@ public interface InterfaceAluno extends Remote{
     public void setCurso(String Curso)  throws RemoteException;
     public int getMatricula() throws RemoteException;
     public void setMatricula(int Matricula) throws RemoteException;
+    public void Adicionar() throws RemoteException;
     
 }

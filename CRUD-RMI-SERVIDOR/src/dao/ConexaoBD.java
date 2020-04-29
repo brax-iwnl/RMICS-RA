@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ConexaoBD {
    
@@ -14,6 +15,9 @@ public class ConexaoBD {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
             return connection;
+            
+        }catch  (SQLException se){
+            System.out.println("Erro:"+se.toString());
         }catch(Exception e){
             System.out.println("Erro:"+e.toString());
         }

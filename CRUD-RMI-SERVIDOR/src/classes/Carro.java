@@ -1,6 +1,7 @@
 package classes;
 
 import Interfaces.InterfaceCarro;
+import dao.CarroDAO;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -52,6 +53,10 @@ public class Carro extends UnicastRemoteObject implements InterfaceCarro{
     @Override
     public void setPlaca(String Placa) {
         this.Placa = Placa;
+    }
+     @Override
+    public void Adicionar(){
+        CarroDAO.insert(this);
     }
     
 }

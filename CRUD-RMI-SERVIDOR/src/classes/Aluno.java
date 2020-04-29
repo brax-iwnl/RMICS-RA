@@ -1,6 +1,7 @@
 package classes;
 
 import Interfaces.InterfaceAluno;
+import dao.AlunoDAO;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -53,6 +54,10 @@ public class Aluno extends UnicastRemoteObject implements InterfaceAluno{
     @Override
     public void setMatricula(int Matricula) {
         this.Matricula = Matricula;
+    }
+    @Override
+    public void Adicionar(){
+        AlunoDAO.insert(this);
     }
     
 }

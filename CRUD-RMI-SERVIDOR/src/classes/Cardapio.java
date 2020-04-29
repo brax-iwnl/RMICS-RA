@@ -1,6 +1,7 @@
 package classes;
 
 import Interfaces.InterfaceCardapio;
+import dao.CardapioDAO;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -53,6 +54,10 @@ public class Cardapio extends UnicastRemoteObject  implements InterfaceCardapio{
     @Override
     public void setQtdPrato(int QtdPrato) {
         this.QtdPrato = QtdPrato;
+    }
+     @Override
+    public void Adicionar(){
+        CardapioDAO.insert(this);
     }
     
 }
