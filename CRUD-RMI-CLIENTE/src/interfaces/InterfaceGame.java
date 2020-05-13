@@ -1,20 +1,19 @@
-package Interfaces;
+package interfaces;
 
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-/**
- *
- * @author rober
- */
-public interface InterfaceGame extends Remote{
-    
-    public String getNomeGame() throws RemoteException;
-    public void setNomeGame(String NomeGame) throws RemoteException;
-    public String getDeveloper() throws RemoteException;
-    public void setDeveloper(String Developer) throws RemoteException;
-    public String getGenero()  throws RemoteException;
-    public void setGenero(String Genero) throws RemoteException;
-    public void Adicionar() throws RemoteException;
-    
+public interface InterfaceGame extends InterfaceGlobal<InterfaceProduto> {
+
+    public String getNome() throws RemoteException;
+
+    public void setNome(String nome) throws RemoteException;
+
+    public int getAno() throws RemoteException;
+
+    public void setAno(int ano) throws RemoteException;
+
+    public double getNota() throws RemoteException;
+
+    public void setNota(double nota) throws RemoteException;
+
 }

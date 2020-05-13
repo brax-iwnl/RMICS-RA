@@ -1,27 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Interfaces;
+package interfaces;
 
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-/**
- *
- * @author rober
- */
-public interface InterfaceCarro extends Remote{
-    
+public interface InterfaceCarro extends InterfaceGlobal<InterfaceCarro> {
+
     public String getModelo() throws RemoteException;
-    public void setModelo(String Modelo) throws RemoteException;
-    public String getMarca() throws RemoteException;
-    public void setMarca(String Marca)throws RemoteException;
-    public int getAno()throws RemoteException;
-    public void setAno(int Ano)throws RemoteException;
-    public String getPlaca() throws RemoteException;
-    public void setPlaca(String Placa) throws RemoteException;
-    public void Adicionar() throws RemoteException;
-    
+
+    public void setModelo(String modelo) throws RemoteException;
+
+    public int getAno() throws RemoteException;
+
+    public void setAno(int ano) throws RemoteException;
+
+    public double getNota() throws RemoteException;
+
+    public void setNota(double nota) throws RemoteException;
+
 }

@@ -1,18 +1,19 @@
-package Interfaces;
+package interfaces;
 
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface InterfaceAluno extends Remote{
-    
-    public String getNomeAluno()  throws RemoteException;
-    public void setNomeAluno(String NomeAluno)  throws RemoteException;
-    public String getTurma() throws RemoteException;
-    public void setTurma(String Turma) throws RemoteException;
-    public String getCurso() throws RemoteException;
-    public void setCurso(String Curso)  throws RemoteException;
+public interface InterfaceAluno extends InterfaceGlobal<InterfaceAluno> {
+
+    public String getNome() throws RemoteException;
+
+    public void setNome(String nome) throws RemoteException;
+
+    public double getMedia() throws RemoteException;
+
+    public void setMedia(double media) throws RemoteException;
+
     public int getMatricula() throws RemoteException;
+
     public void setMatricula(int Matricula) throws RemoteException;
-    public void Adicionar() throws RemoteException;
-    
+
 }
